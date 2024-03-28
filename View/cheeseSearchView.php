@@ -1,24 +1,42 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <?php require_once "../controller/cheeseController.php"; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Cheeses</title>
+=======
+<?php ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Cheeses</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Additional head elements -->
+>>>>>>> 15af2941cb2a922f9a5b85efd9e76772d9b73943
 </head>
 <body>
     <h2>Search for Cheeses</h2>
     <form id="searchForm">
         Name: <input type="text" id="name">
         Type: <select id="type">
+<<<<<<< HEAD
                 <option value="">Any</option>
                 <option value="Hard">Hard</option>
                 <option value="Soft">Soft</option>
             </select>
+=======
+            <option value="">Any</option>
+            <option value="Hard">Hard</option>
+            <option value="Soft">Soft</option>
+        </select>
+>>>>>>> 15af2941cb2a922f9a5b85efd9e76772d9b73943
         Country of Origin: <input type="text" id="country">
         Strength: <input type="number" id="strength" min="1" max="5">
         Price per Gram: <input type="text" id="price">
         <button type="button" id="searchButton">Search</button>
     </form>
+<<<<<<< HEAD
     <div id="results">
         <table>
             <thead>
@@ -50,6 +68,9 @@
             </tbody>
         </table>
     </div>
+=======
+    <div id="results"></div>
+>>>>>>> 15af2941cb2a922f9a5b85efd9e76772d9b73943
 
     <script src="searchCheeses.js"></script>
 </body>
