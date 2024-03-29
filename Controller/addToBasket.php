@@ -10,9 +10,9 @@ require_once "../model/cheeseModel.php";
 require_once "../model/dataAccess.php";
 
 // Check if the Add to Basket button was clicked and the cheese ID is set
-        if (isset($_POST['add_to_basket']) && isset($_POST['cheese_name'])) 
+        if (isset($_GET['add_to_basket']) && isset($_GET['cheese_name'])) 
         {
-            $cheeseName = $_POST['cheese_name']; // Grabs the name of the cheese that will be added
+            $cheeseName = $_GET['cheese_name']; // Grabs the name of the cheese that will be added
 
             // Initialize the basket if it doesn't exist
             if (!isset($_SESSION['basket'])) {
