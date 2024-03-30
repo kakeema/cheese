@@ -1,8 +1,13 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <?php require_once "../controller/cheeseController.php";
 require_once "../controller/addToBasket.php";
 // session_start();
 ?>
+=======
+<?php require_once "../controller/cheeseController.php"; ?>
+<?php require_once "../controller/addToBasket.php"; ?>
+>>>>>>> dae10a34887edd11854bf7e4cc610b1aa6e65bbe
 
 <html lang="en">
 <head>
@@ -10,6 +15,7 @@ require_once "../controller/addToBasket.php";
     <title>Cheeses</title>
 </head>
 <body>
+<<<<<<< HEAD
 
      <!-- This will display the message when an order has been placed -->
      <?php if (isset($_SESSION['order_placed'])): ?>
@@ -18,6 +24,8 @@ require_once "../controller/addToBasket.php";
     <?php endif; ?>
 
     <!-- Search for cheese inputs -->
+=======
+>>>>>>> dae10a34887edd11854bf7e4cc610b1aa6e65bbe
     <h2>Search for Cheeses</h2>
     <form id="searchForm" method="GET" action="../controller/cheeseController.php">
         Name: <input type="text" id="name" name="name">
@@ -74,6 +82,7 @@ require_once "../controller/addToBasket.php";
     <div id="basket">
         <?php if (isset($_SESSION['basket']) && count($_SESSION['basket']) > 0): ?>
             <table>
+<<<<<<< HEAD
             <thead>
                 <tr>
                     <th>Name</th>
@@ -87,6 +96,16 @@ require_once "../controller/addToBasket.php";
                             <td><?= htmlspecialchars($details['quantity']) ?></td> <!-- With this we are now able to access the quantity from the details array -->
                             <td>
                                 <!-- Here I will update quantity/remove from basket, may not do this in the same file but, create a replicate of this file but with the ability to add and remove cheeses for an admin user -->
+=======
+                <!-- ... thead section ... -->
+                <tbody>
+                    <?php foreach ($_SESSION['basket'] as $cheeseName => $quantity): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($cheeseName) ?></td>
+                            <td><?= htmlspecialchars($quantity) ?></td>
+                            <td>
+                                <!-- Add form or link to update quantity/remove from basket -->
+>>>>>>> dae10a34887edd11854bf7e4cc610b1aa6e65bbe
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -96,9 +115,13 @@ require_once "../controller/addToBasket.php";
             <p>Your basket is empty.</p>
         <?php endif; ?>
     </div>
+<<<<<<< HEAD
     <form action="checkout.php" method="GET">
         <button type="submit" id="buyButton">Buy</button>
     </form>
+=======
+    
+>>>>>>> dae10a34887edd11854bf7e4cc610b1aa6e65bbe
 
     <script src="searchCheeses.js"></script>
 </body>

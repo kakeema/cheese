@@ -23,7 +23,11 @@ if (!empty($_GET['strength'])) {
 }
 if (!empty($_GET['price'])) {
     $sql .= " AND price_per_gram = :price";
+<<<<<<< HEAD
     $params[':price'] = (float)$_GET['price']; // Prices typically include decimal points, so will use a float for now.
+=======
+    $params[':price'] = (float)$_GET['price']; // Prices are typically decimals, so will use a float for now.
+>>>>>>> dae10a34887edd11854bf7e4cc610b1aa6e65bbe
 }
 
 $results = $pdo->prepare($sql);
@@ -32,6 +36,10 @@ $results->execute($params);
 // After preparing and executing the statement
 $cheeses = $results->fetchAll(PDO::FETCH_CLASS, 'Cheese');
 
+<<<<<<< HEAD
 print json_encode($cheeses); // Prints results back to the screen
+=======
+echo json_encode($cheeses);
+>>>>>>> dae10a34887edd11854bf7e4cc610b1aa6e65bbe
 
 ?>
